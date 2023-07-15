@@ -36,7 +36,7 @@ function Header() {
         }
     ]
   return (
-    <div className='flex items-center justify-between p-5 w-screen'>
+    <div className='flex items-center justify-between px-8 py-5 w-screen'>
         <div className='flex gap-8 items-center'>
             <img src={logo} className='w-[40px] 
             md:w-[60px] object-cover' />
