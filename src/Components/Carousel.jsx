@@ -23,39 +23,39 @@ const Carousel = ({children: slides}) => {
     }, [])
 
   return (
-    <div className="overflow-hidden scroll-smooth relative m-8 mx-8 md:mx-16">
+    <div className="overflow-hidden scroll-smooth relative mb-4 mx-[20px] md:mx-16">
         <div 
          className="flex transition-transform ease-out duration-500"
          style={{transform: `translateX(-${curr*100}%)`}}
          >{slides}
         </div>
-        <div className="absolute inset-0 flex items-center justify-between p-4">
-            <button onClick={prev} className='hidden md:block bg-transparent
+        <div className="absolute inset-0 flex items-center justify-between p-1 md:p-2 lg:p-4">
+            <button onClick={prev} className='bg-transparent
              text-white cursor-pointer'>
                 <HiChevronLeft
-                    className=" text-white text-[50px]"
+                    className=" text-white text-[30px] md:text-[50px]"
                 />
                 {/* <AiOutlineLeft size={20}/> */}
             </button>
 
-            <button onClick={next} className='hidden md:block bg-transparent
+            <button onClick={next} className='bg-transparent
             hover:b-[0px] text-white cursor-pointer'>
                 <HiChevronRight
-                    className=" text-white text-[50px]"
+                    className=" text-white text-[30px] md:text-[50px]"
                 />
                 {/* <AiOutlineRight size={20}/> */}
             </button>
 
         </div> 
 
-        <div className='hidden md:block absolute bottom-4 right-0 left-0'>
+        <div className='absolute bottom-2 md:bottom-4 right-0 left-0'>
             <div className="flex items-center justify-center gap-3">
                 {
                     slides.map((el, i) => (
                         <div
                          className={`
-                          transition-all w-2 h-2 bg-white rounded-full
-                          ${curr === i ? "p-2" : "opacity-50"}
+                          transition-all w-1 md:w-2 h-1 md:h-2 bg-white rounded-full
+                          ${curr === i ? "p-1 md:p-2" : "opacity-50"}
                          `}
                         />
                     ))
