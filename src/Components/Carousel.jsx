@@ -23,7 +23,7 @@ const Carousel = ({children: slides}) => {
     }, [])
 
   return (
-    <div className="overflow-hidden scroll-smooth relative mb-4 mx-[20px] md:mx-16">
+    <div className="overflow-hidden scroll-smooth relative mb-4 mx-[20px] lg:mx-16 rounded-md">
         <div 
          className="flex transition-transform ease-out duration-500"
          style={{transform: `translateX(-${curr*100}%)`}}
@@ -48,8 +48,8 @@ const Carousel = ({children: slides}) => {
 
         </div> 
 
-        <div className='absolute bottom-2 md:bottom-4 right-0 left-0'>
-            <div className="flex items-center justify-center gap-3">
+        <div className='absolute bottom-3 md:bottom-4 right-0 left-0'>
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
                 {
                     slides.map((el, i) => (
                         <div
