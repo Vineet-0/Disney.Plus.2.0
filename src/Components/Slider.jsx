@@ -25,12 +25,12 @@ function Slider() {
         element.scrollLeft-=screenWidth-110
     }
   return (
-    <div className="w-[100%] max-h-[650px] flex flex-center">
+    <div className="w-full max-h-[650px] flex flex-center">
         <Carousel>
         {
             movieList.map((item)=>(
                 <img src={IMAGE_BASE_URL+item.backdrop_path} 
-                    // className='object-cover 
+                    className='min-w-full object-cover object-left-top'
                     // object-left-top rounded-md hover:border-[4px]
                     // border-gray-400 transition-all duration-100 ease-in'
                 />
