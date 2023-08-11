@@ -19,6 +19,8 @@ function App() {
         <ProductionHouse/>
 
         <GenreMovieList/>
+
+        <div className='h-10'> </div>
     </div>
   )
 }

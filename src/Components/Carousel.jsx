@@ -25,7 +25,7 @@ const Carousel = ({children: slides}) => {
     }, [])
 
   return (
-    <div className="overflow-hidden scroll-smooth relative mb-4 mx-[20px] lg:mx-16 rounded-md">
+    <div className="overflow-hidden scroll-smooth relative mt-2 mb-4 mx-[20px] lg:mx-16 rounded-md">
         <div 
          className="flex transition-transform ease-out duration-500"
          style={{transform: `translateX(-${curr*100}%)`}}
