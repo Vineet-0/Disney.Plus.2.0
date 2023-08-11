@@ -28,9 +28,6 @@ function Slider() {
     <div className="w-[100%] max-h-[650px] flex flex-center">
         <Carousel>
         {
-        //   slides.map((i) => (
-        //     <img src={i} alt="slideImage" className="" />
-        //   ))
             movieList.map((item)=>(
                 <img src={IMAGE_BASE_URL+item.backdrop_path} 
                     // className='object-cover 

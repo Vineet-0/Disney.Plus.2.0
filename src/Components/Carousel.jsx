@@ -7,13 +7,15 @@ const Carousel = ({children: slides}) => {
 
     function prev(){
         setCurr((curr) => (
-            curr === 0 ? slides.length - 1 : curr - 1
+            // curr === 0 ? slides.length - 1 : curr - 1
+            curr === 0 ? 19 : curr - 1
         ))
     }
 
     function next(){
         setCurr((curr) => (
-            curr === slides.length-1 ? 0 : curr+1
+            // curr === slides.length-1 ? 0 : curr+1
+            curr === 19 ? 0 : curr+1
         ))
     } 
 
@@ -30,16 +32,14 @@ const Carousel = ({children: slides}) => {
          >{slides}
         </div>
         <div className="absolute inset-0 flex items-center justify-between p-1 md:p-2 lg:p-4">
-            <button onClick={prev} className='bg-transparent
-             text-white cursor-pointer'>
+            <button onClick={prev} className='bg-transparent text-white cursor-pointer border-0'>
                 <HiChevronLeft
                     className=" text-white text-[30px] md:text-[50px]"
                 />
                 {/* <AiOutlineLeft size={20}/> */}
             </button>
 
-            <button onClick={next} className='bg-transparent
-            hover:b-[0px] text-white cursor-pointer'>
+            <button onClick={next} className='bg-transparent text-white cursor-pointer border-0'>
                 <HiChevronRight
                     className=" text-white text-[30px] md:text-[50px]"
                 />
