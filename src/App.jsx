@@ -20,7 +20,7 @@ function App() {
 
         <GenreMovieList/>
 
-        <div className='h-10'> </div>
+        <div className='h-5 sm:h-10'> </div>
     </div>
   )
 }
