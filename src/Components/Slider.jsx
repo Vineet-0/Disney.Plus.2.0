@@ -40,6 +40,8 @@ function Slider() {
         </Carousel>
     </div>
 
+    
+
     // <div>
     //     <HiChevronLeft
     //         className="hidden md:block text-white text-[30px] absolute
