@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from './../assets/Images/logo-d-plus.svg'
+import logo from '../assets/Images/MoviesNowLogo.png'
 import { HiHome,
     HiMagnifyingGlass,
     HiStar,
@@ -11,20 +11,12 @@ function Header() {
     const [toggle,setToggle]=useState(false);
     const menu=[
         {
-            name:'HOME',
-            icon:HiHome
-        },
-        {
             name:'SEARCH',
             icon:HiMagnifyingGlass
         },
         {
             name:'WATCH LIST',
             icon:HiPlus
-        },
-        {
-            name:'ORIGINALS',
-            icon:HiStar
         },
         {
             name:'MOVIES',
@@ -38,22 +30,22 @@ function Header() {
   return (
     <div className='flex items-center justify-between px-8 py-5 w-screen'>
         <div className='flex gap-8 items-center'>
-            <img src={logo} className='w-[40px] 
-            md:w-[60px] object-cover' />
+            <img src={logo} className='w-[150px] 
+            md:w-[200px] object-cover' />
             <div className='hidden lg:flex gap-8 pt-[10px]'>
             {menu.map((item)=>(
                 <HeaderItem name={item.name} Icon={item.icon} />
             ))}
         </div>
         <div className='flex pt-[11px] lg:hidden gap-5'>
-            {menu.map((item,index)=>index<3&&(
+            {menu.map((item,index)=>index<1&&(
                 <HeaderItem name={''} Icon={item.icon} />
             ))}
-            <div className='lg:hidden' onClick={()=>setToggle(!toggle)}>       
+            <div className='lg:hidden z-50' onClick={()=>setToggle(!toggle)}>       
                 <HeaderItem name={''} Icon={HiDotsVertical} />
                 {toggle? <div className='absolute mt-3 bg-[#121212] rounded-md 
                         border-[1px] border-gray-700 px-5 pt-4 pb-2'>
-                        {menu.map((item,index)=>index>2&&(
+                        {menu.map((item,index)=>index>0&&(
                             <HeaderItem name={item.name} Icon={item.icon} />
                         ))}
                         </div>:null}
