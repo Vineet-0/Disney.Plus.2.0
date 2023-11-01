@@ -46,7 +46,13 @@ const Carousel = ({children: slides}) => {
 
         </div> 
 
-        <div className='absolute bottom-3 md:bottom-4 right-0 left-0'>
+        <div className='absolute bottom-0 right-0 left-0 w-full shadow-3xl'>
+            <div className='flex items-center justify-center bg-black h-8 md:h-10 opacity-20'>
+
+            </div>
+        </div>
+
+        <div className='absolute bottom-3 md:bottom-4 right-0 left-0 z-10'>
             <div className="flex items-center justify-center gap-1 sm:gap-2">
                 {
                     slides.map((el, i) => (
