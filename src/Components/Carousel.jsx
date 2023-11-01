@@ -73,7 +73,7 @@ const Carousel = ({children: slides,titles}) => {
             </div>
         </div>
 
-        <div className="bg-black bg-opacity-40 px-4 py-2 absolute top-6 right-6 text-white p-1">
+        <div className="bg-black bg-opacity-40 px-3 py-1 md:px-6 md:py-2 absolute top-3 right-3 md:top-6 md:right-6 text-white p-1 rounded-lg">
             <h2 className="text-sm md:text-5xl">{titles[curr]}</h2>
         </div>
 
