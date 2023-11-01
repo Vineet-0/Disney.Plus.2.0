@@ -46,8 +46,8 @@ const Carousel = ({children: slides}) => {
 
         </div> 
 
-        <div className='absolute bottom-0 right-0 left-0 w-full shadow-3xl'>
-            <div className='flex items-center justify-center bg-black h-8 md:h-10 opacity-20'>
+        <div className='absolute bottom-0 right-0 left-0 w-full shadow-2xl'>
+            <div className='flex items-center justify-center bg-black h-8 md:h-11 opacity-20'>
 
             </div>
         </div>
