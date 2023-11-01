@@ -27,14 +27,12 @@ function Slider() {
     }
   return (
     <div className="w-full max-h-[650px] flex flex-center">
-        <Carousel>
+        <Carousel titles={movieList.map((item) => item.title)}>
         {
             movieList.map((item)=>(
-                <>
-                    <img src={IMAGE_BASE_URL+item.backdrop_path} 
-                        className='min-w-full object-cover object-left-top'
-                    />
-                </>
+                <img src={IMAGE_BASE_URL+item.backdrop_path} 
+                    className='min-w-full object-cover object-left-top'
+                />
             ))
         }
         </Carousel>

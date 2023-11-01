@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
 
-const Carousel = ({children: slides}) => {
+const Carousel = ({children: slides,titles}) => {
     const [curr, setCurr] = useState(0);
 
     function prev(){
@@ -46,6 +46,12 @@ const Carousel = ({children: slides}) => {
 
         </div> 
 
+        {/* <div className='absolute bottom-0 right-0 left-0 w-full shadow-2xl'>
+            <h2 className=' bg-white text-black fixed top-0 right-0'>
+                {slides.title}
+            </h2>
+        </div> */}
+
         <div className='absolute bottom-0 right-0 left-0 w-full shadow-2xl'>
             <div className='flex items-center justify-center bg-black h-8 md:h-11 opacity-20'>
 
@@ -65,6 +71,10 @@ const Carousel = ({children: slides}) => {
                     ))
                 }
             </div>
+        </div>
+
+        <div className="bg-black bg-opacity-40 px-4 py-2 absolute top-6 right-6 text-white p-1">
+            <h2 className="text-sm md:text-5xl">{titles[curr]}</h2>
         </div>
 
     </div>
