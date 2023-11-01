@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import GlobalApi from '../Services/GlobalApi'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
+
 const IMAGE_BASE_URL="https://image.tmdb.org/t/p/original";
-const screenWidth=window.innerWidth;
+const screenWidth = window.innerWidth;
+
 import Carousel from '../Components/Carousel'
 function Slider() {
     const [movieList,setMovieList]=useState([]);
@@ -32,6 +34,7 @@ function Slider() {
             movieList.map((item)=>(
                 <img src={IMAGE_BASE_URL+item.backdrop_path} 
                     className='min-w-full object-cover object-left-top'
+                    alt={item.title}
                 />
             ))
         }
