@@ -39,6 +39,7 @@ function MovieList({genreId,index_}) {
             </> 
             ))}
         </div>
+        
         <IoChevronForwardOutline onClick={()=>slideRight(elementRef.current)}
             className={`text-[50px] text-white hidden md:block
             p-2 cursor-pointer z-10 top-0

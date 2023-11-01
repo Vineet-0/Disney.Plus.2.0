@@ -30,11 +30,11 @@ function Slider() {
         <Carousel>
         {
             movieList.map((item)=>(
-                <img src={IMAGE_BASE_URL+item.backdrop_path} 
-                    className='min-w-full object-cover object-left-top'
-                    // object-left-top rounded-md hover:border-[4px]
-                    // border-gray-400 transition-all duration-100 ease-in'
-                />
+                <>
+                    <img src={IMAGE_BASE_URL+item.backdrop_path} 
+                        className='min-w-full object-cover object-left-top'
+                    />
+                </>
             ))
         }
         </Carousel>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
 
 const Carousel = ({children: slides}) => {
@@ -31,37 +30,37 @@ const Carousel = ({children: slides}) => {
          style={{transform: `translateX(-${curr*100}%)`}}
          >{slides}
         </div>
+        
         <div className="absolute inset-0 flex items-center justify-between p-1 md:p-2 lg:p-4">
             <button onClick={prev} className='bg-transparent text-white cursor-pointer border-0'>
                 <HiChevronLeft
                     className=" text-white text-[30px] md:text-[50px]"
                 />
-                {/* <AiOutlineLeft size={20}/> */}
             </button>
 
             <button onClick={next} className='bg-transparent text-white cursor-pointer border-0'>
                 <HiChevronRight
                     className=" text-white text-[30px] md:text-[50px]"
                 />
-                {/* <AiOutlineRight size={20}/> */}
             </button>
 
         </div> 
 
         <div className='absolute bottom-3 md:bottom-4 right-0 left-0'>
-            <div className="flex items-center justify-center gap-2 sm:gap-3">
+            <div className="flex items-center justify-center gap-1 sm:gap-2">
                 {
                     slides.map((el, i) => (
                         <div
                          className={`
-                          transition-all w-1 md:w-2 h-1 md:h-2 bg-white rounded-full
-                          ${curr === i ? "p-1 md:p-2" : "opacity-50"}
+                          transition-all w-2 md:w-4 h-1 md:h-2 bg-white rounded-full
+                          ${curr === i ? "w-5 md:w-8" : "opacity-50"}
                          `}
                         />
                     ))
                 }
             </div>
         </div>
+
     </div>
   )
 }
