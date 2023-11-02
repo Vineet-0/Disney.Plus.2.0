@@ -27,6 +27,7 @@ function Slider() {
     const sliderLeft=(element)=>{
         element.scrollLeft-=screenWidth-110
     }
+
   return (
     <div className="w-full max-h-[650px] flex flex-center">
         <Carousel titles={movieList.map((item) => item.title)}>

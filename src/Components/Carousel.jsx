@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
+import { BiLinkExternal } from 'react-icons/bi';
 
 const Carousel = ({children: slides,titles}) => {
     const [curr, setCurr] = useState(0);
@@ -22,6 +23,14 @@ const Carousel = ({children: slides,titles}) => {
         const slideInterval = setInterval(next, 5000);
         return () => clearInterval(slideInterval)
     }, [])
+
+    const handleRedirect = () => {
+        if (titles[curr]) {
+          const encodedTitle = encodeURIComponent(titles[curr] + " official trailer");
+          const searchUrl = `https://www.google.com/search?q=${encodedTitle}`;
+          window.open(searchUrl, '_blank');
+        }
+      };
 
   return (
     <div className="object-fill overflow-hidden scroll-smooth relative mt-2 mb-4 mx-[20px] lg:mx-16 rounded-md">
@@ -46,12 +55,6 @@ const Carousel = ({children: slides,titles}) => {
 
         </div> 
 
-        {/* <div className='absolute bottom-0 right-0 left-0 w-full shadow-2xl'>
-            <h2 className=' bg-white text-black fixed top-0 right-0'>
-                {slides.title}
-            </h2>
-        </div> */}
-
         <div className='absolute bottom-0 right-0 left-0 w-full shadow-2xl'>
             <div className='flex items-center justify-center bg-black h-8 md:h-11 opacity-20'>
 
@@ -64,7 +67,7 @@ const Carousel = ({children: slides,titles}) => {
                     slides.map((el, i) => (
                         <div
                          className={`
-                          transition-all w-2 md:w-4 h-1 md:h-2 bg-white rounded-full
+                          transition-all w-2 md:w-4 h-1 md:h-1.5 bg-white rounded-sm
                           ${curr === i ? "w-5 md:w-8" : "opacity-50"}
                          `}
                         />
@@ -74,10 +77,23 @@ const Carousel = ({children: slides,titles}) => {
         </div>
 
         {titles[curr] !== undefined && (
-          <div className="bg-black bg-opacity-40 px-3 py-1 md:px-6 md:py-2 absolute top-3 right-3 md:top-6 md:right-6 text-white p-1 rounded-lg">
-            <h2 className="text-sm md:text-5xl">{titles[curr]}</h2>
+          <div className="bg-black bg-opacity-40 px-3 py-1 md:px-4 lg:px-6 md:py-2 absolute top-3 right-3 md:top-6 md:right-6 text-white p-1 rounded-lg">
+            <h2 className="text-sm md:text-xl lg:text-3xl">{titles[curr]}</h2>
           </div>
         )}
+
+        {titles[curr] !== undefined && (
+          <div className="absolute bottom-0 right-0 text-white font-bold">
+            <button
+                className='bg-transparent text-sm md:text-xl'
+                onClick={handleRedirect}
+            >
+                <BiLinkExternal />
+            </button>
+          </div>
+        )}
+
+        
 
     </div>
   )
