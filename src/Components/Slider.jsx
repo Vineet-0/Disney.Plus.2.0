@@ -29,8 +29,12 @@ function Slider() {
     }
 
   return (
-    <div className="w-full max-h-[650px] flex flex-center">
-        <Carousel titles={movieList.map((item) => item.title)}>
+    <div className="w-full max-h-[700px] flex flex-center">
+        <Carousel
+            titles={movieList.map((item) => item.title || item.name)}
+            years={movieList.map((item) => item.release_date && item.release_date.slice(0, 4) || item.first_air_date && item.first_air_date.slice(0, 4))}
+            languages={movieList.map((item) => item.original_language)}
+        >
         {
             movieList.map((item)=>(
                 <img src={IMAGE_BASE_URL+item.backdrop_path} 
