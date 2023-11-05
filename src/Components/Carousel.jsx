@@ -55,15 +55,15 @@ const Carousel = ({children: slides,titles,years,languages}) => {
 
         {/* Details */}
 
-        <div className='absolute left-12 bottom-[100px] xl:bottom-[130px] z-10'>
-            <div className='flex flex-row mb-4'>
+        <div className='absolute left-12 bottom-[30px] md:bottom-[50px] xl:bottom-[130px] z-10'>
+            <div className='flex flex-row mb-2 lg:mb-4'>
                 {titles[curr] !== undefined && (
                 <div className="">
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl">{titles[curr]}</h2>
+                    <h2 className="text-2xl md:text-3xl lg:text-5xl">{titles[curr]}</h2>
                 </div>
                 )}
             </div>
-            <div className='flex flex-row items-center mb-4'>
+            <div className='flex flex-row items-center mb-2 lg:mb-4'>
                 {years[curr] !== undefined && (
                     <>
                         <div className="">
@@ -76,7 +76,7 @@ const Carousel = ({children: slides,titles,years,languages}) => {
 
                 {languages[curr] !== undefined && (
                 <div className="">
-                    <h2 className="text-xl">
+                    <h2 className="text-md md:text-lg lg:text-xl">
                         {   languages[curr] === 'en' ? 'English'
                                 :
                             languages[curr] === 'ja' ? 'Japanise'
@@ -90,20 +90,20 @@ const Carousel = ({children: slides,titles,years,languages}) => {
                 </div>
                 )}
             </div>
-            <div className='flex gap-4'>
+            <div className='flex gap-2 md:gap-3'>
                 <button
-                    className='border-0 w-[100px] text-xl px-4 py-2 font-bold rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600'
+                    className='border-0 w-[70px] md:w-[100px] text-xl px-2 md:px-4 py-1 md:py-2 font-bold rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600'
                     onClick={handleRedirect}
                 >
-                    <div className='flex flex-row items-center gap-2'>
-                        <FaPlay className='text-lg'/>
+                    <div className='flex flex-row text-[15px] md:text-xl items-center gap-2'>
+                        <FaPlay className='text-sm md:text-lg'/>
                         Play
                     </div>
                 </button>
                 <button
-                    className='border-0 w-[100px] text-xl px-4 py-2 font-bold rounded-lg bg-white bg-opacity-30'
+                    className='border-0 w-[70px] md:w-[100px] text-xl px-2 md:px-4 py-1 md:py-2 font-bold rounded-lg bg-white bg-opacity-30'
                 >
-                    <div className='flex flex-row items-center gap-2'>
+                    <div className='flex flex-row text-[15px] md:text-xl items-center gap-2'>
                         <ImInfo />
                         Info
                     </div>
@@ -113,7 +113,7 @@ const Carousel = ({children: slides,titles,years,languages}) => {
 
         {/* bottom bar */}
         
-        <div className='absolute bottom-3 md:bottom-4 xl:bottom-[140px] right-0 left-0 z-10'>
+        <div className='absolute bottom-3 md:bottom-5 xl:bottom-[140px] right-0 left-0 z-10'>
             <div className="flex items-center justify-center gap-1 sm:gap-2">
                 {
                     slides.map((el, i) => (
@@ -130,22 +130,22 @@ const Carousel = ({children: slides,titles,years,languages}) => {
 
         {/* left right button */}
         
-        <div className="absolute bottom-[50px] xl:bottom-[120px] right-[150px] flex items-center gap-4">
+        <div className="absolute bottom-[30px] md:bottom-[50px] xl:bottom-[120px] right-12 md:right-[100px] xl:right-[150px] flex items-center gap-2 md:gap-3 xl:gap-4">
             <button 
                 onClick={prev}
-                className='bg-white bg-opacity-20 w-[50px] h-[50px] text-white cursor-pointer border-0 p-0'
+                className='bg-white bg-opacity-20 w-[36px] h-[36px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] text-white cursor-pointer border-0 p-0'
              >
                 <HiChevronLeft
-                    className=" text-white text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
+                    className=" text-white text-[25px] xl:text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
                 />
             </button>
 
             <button
                 onClick={next}
-                className='bg-white bg-opacity-20 w-[50px] h-[50px] text-white cursor-pointer border-0 p-0' 
+                className='bg-white bg-opacity-20 w-[36px] h-[36px] md:w-[40px] md:h-[40px] xl:w-[50px] xl:h-[50px] text-white cursor-pointer border-0 p-0' 
             >
                 <HiChevronRight
-                    className=" text-white text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
+                    className=" text-white text-[25px] xl:text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
                 />
             </button>
 
