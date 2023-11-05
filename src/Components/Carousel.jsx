@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
-import { BiLinkExternal } from 'react-icons/bi';
-import { AiOutlineInfoCircle } from 'react-icons/ai';
-import { BsFillPlayFill } from 'react-icons/bs';
+import { ImInfo } from 'react-icons/im';
+import { FaPlay } from 'react-icons/fa';
 
 const Carousel = ({children: slides,titles,years,languages}) => {
     const [curr, setCurr] = useState(0);
@@ -36,54 +35,27 @@ const Carousel = ({children: slides,titles,years,languages}) => {
 
   return (
     <div className="object-fill overflow-hidden scroll-smooth relative mb-4">
-        <div className="absolute w-1/2 h-full bg-gradient-to-r from-black to-transparent z-10">
 
-        </div>
+        {/* Slides */}
 
         <div 
          className="flex transition-transform ease-out duration-500"
          style={{transform: `translateX(-${curr*100}%)`}}
          >{slides}
         </div>
-        
-        <div className="absolute bottom-[50px] right-[150px] flex items-center gap-4">
-            <button 
-                onClick={prev}
-                className='bg-white bg-opacity-20 w-[50px] h-[50px] text-white cursor-pointer border-0 p-0'
-             >
-                <HiChevronLeft
-                    className=" text-white text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
-                />
-            </button>
 
-            <button
-                onClick={next}
-                className='bg-white bg-opacity-20 w-[50px] h-[50px] text-white cursor-pointer border-0 p-0' 
-            >
-                <HiChevronRight
-                    className=" text-white text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
-                />
-            </button>
+        {/* Shadow */}
 
-        </div> 
+        <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-black to-transparent">
 
+        </div>
+        <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#121212] to-[transparent]">
 
-        <div className='absolute bottom-3 md:bottom-4 right-0 left-0 z-10'>
-            <div className="flex items-center justify-center gap-1 sm:gap-2">
-                {
-                    slides.map((el, i) => (
-                        <div
-                         className={`
-                          transition-all w-2 md:w-4 h-1 md:h-1.5 bg-white rounded-sm
-                          ${curr === i ? "w-5 md:w-8" : "opacity-50"}
-                         `}
-                        />
-                    ))
-                }
-            </div>
         </div>
 
-        <div className='absolute left-12 bottom-[100px] z-10'>
+        {/* Details */}
+
+        <div className='absolute left-12 bottom-[100px] xl:bottom-[130px] z-10'>
             <div className='flex flex-row mb-4'>
                 {titles[curr] !== undefined && (
                 <div className="">
@@ -124,21 +96,61 @@ const Carousel = ({children: slides,titles,years,languages}) => {
                     onClick={handleRedirect}
                 >
                     <div className='flex flex-row items-center gap-2'>
-                        <BsFillPlayFill/>
+                        <FaPlay className='text-lg'/>
                         Play
                     </div>
                 </button>
                 <button
                     className='border-0 w-[100px] text-xl px-4 py-2 font-bold rounded-lg bg-white bg-opacity-30'
-                    // onClick={handleRedirect}
                 >
                     <div className='flex flex-row items-center gap-2'>
-                        <AiOutlineInfoCircle />
+                        <ImInfo />
                         Info
                     </div>
                 </button>
             </div>
         </div>
+
+        {/* bottom bar */}
+        
+        <div className='absolute bottom-3 md:bottom-4 xl:bottom-[140px] right-0 left-0 z-10'>
+            <div className="flex items-center justify-center gap-1 sm:gap-2">
+                {
+                    slides.map((el, i) => (
+                        <div
+                         className={`
+                          transition-all w-2 md:w-4 h-1 md:h-1.5 bg-white rounded-sm
+                          ${curr === i ? "w-5 md:w-8" : "opacity-50"}
+                         `}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+
+        {/* left right button */}
+        
+        <div className="absolute bottom-[50px] xl:bottom-[120px] right-[150px] flex items-center gap-4">
+            <button 
+                onClick={prev}
+                className='bg-white bg-opacity-20 w-[50px] h-[50px] text-white cursor-pointer border-0 p-0'
+             >
+                <HiChevronLeft
+                    className=" text-white text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
+                />
+            </button>
+
+            <button
+                onClick={next}
+                className='bg-white bg-opacity-20 w-[50px] h-[50px] text-white cursor-pointer border-0 p-0' 
+            >
+                <HiChevronRight
+                    className=" text-white text-[30px] font-bold mx-auto hover:scale-125 transition-all duration-150 ease-in"
+                />
+            </button>
+
+        </div> 
+
     </div>
   )
 }

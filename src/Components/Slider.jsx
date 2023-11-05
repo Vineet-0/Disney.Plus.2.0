@@ -29,7 +29,7 @@ function Slider() {
     }
 
   return (
-    <div className="w-full max-h-[700px] flex flex-center">
+    <div className="w-full max-h-[700px] xl:max-h-[800px] flex flex-center">
         <Carousel
             titles={movieList.map((item) => item.title || item.name)}
             years={movieList.map((item) => item.release_date && item.release_date.slice(0, 4) || item.first_air_date && item.first_air_date.slice(0, 4))}

@@ -82,14 +82,14 @@ function OTT_House() {
 
     // ]
   return (
-    <div className='p-2 px-5 lg:px-16'>
+    <div className='p-2 xl:mt-[-150px] px-5 lg:px-16'>
         <h2 className='text-[20px] mb-[10px] sm:text-[25px] text-white font-bold pl-4 sm:pl-5 z-10'>
             OTT's
         </h2> 
         <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 md:gap-5'>
             {OTT_List.map((item)=>(
                 <div className='hover:scale-110 transition-all duration-300
-                ease-in-out cursor-pointer relative shadow-xl 
+                ease-in-out cursor-pointer relative shadow-xl xl:shadow-none
                 shadow-gray-800
                 '>
                     <img src={item.image} className='object-fill w-full h-full rounded-lg z-[1] opacity-100' /> 
