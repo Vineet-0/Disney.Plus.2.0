@@ -1,30 +1,31 @@
 import React, { useState } from 'react'
 import logo from '../assets/Images/MoviesNowLogo.png'
-import { HiHome,
-    HiMagnifyingGlass,
-    HiStar,
-    HiPlayCircle,
-    HiTv } from "react-icons/hi2";
-import { HiPlus,HiDotsVertical } from "react-icons/hi";
+import { RiSlideshow2Fill } from "react-icons/ri";
+import { HiOutlineUserCircle , HiDotsVertical  } from "react-icons/hi";
+import { FaSearch , FaPlus , FaPlay , FaTv } from "react-icons/fa";
 import HeaderItem from './HeaderItem';
 function Header() {
     const [toggle,setToggle]=useState(false);
     const menu=[
         {
             name:'SEARCH',
-            icon:HiMagnifyingGlass
+            icon:FaSearch
         },
         {
             name:'WATCH LIST',
-            icon:HiPlus
+            icon:FaPlus
+        },
+        {
+            name:'SHOWS',
+            icon:RiSlideshow2Fill
         },
         {
             name:'MOVIES',
-            icon:HiPlayCircle
+            icon:FaPlay
         },
         {
             name:'SERIES',
-            icon:HiTv
+            icon:FaTv
         }
     ]
   return (
@@ -52,8 +53,11 @@ function Header() {
                 </div> 
             </div>
         </div>
-        <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
-        className='w-[40px] rounded-full'/>
+        <div>
+            <HiOutlineUserCircle className='w-[35px] h-[35px]'/> 
+        </div>
+        {/* <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+        className='w-[40px] rounded-full'/> */}
     </div>
   )
 }
