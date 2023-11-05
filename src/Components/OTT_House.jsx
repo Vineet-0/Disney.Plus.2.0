@@ -1,5 +1,5 @@
 import React from 'react'
-import primeVideo from './../assets/Images/primeVideo.jpg'
+import primeVideo from './../assets/Images/primeVideo.webp'
 import netflix from './../assets/Images/netflix.jpg'
 import disney from './../assets/Images/disneyPlusHotstar.avif'
 import sonyLiv from './../assets/Images/sonyLiv.jpg'
