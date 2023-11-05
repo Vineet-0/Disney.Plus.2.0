@@ -5,12 +5,6 @@ import disney from './../assets/Images/disneyPlusHotstar.avif'
 import sonyLiv from './../assets/Images/sonyLiv.jpg'
 import zee5 from './../assets/Images/zee5.avif'
 import jioCinema from './../assets/Images/jioCinema.avif'
-
-// import disney from './../assets/Images/disney.png'
-// import marvel from './../assets/Images/marvel.png'
-// import nationalG from './../assets/Images/nationalG.png'
-// import pixar from './../assets/Images/pixar.png'
-// import starwar from './../assets/Images/starwar.png'
  
 import starwarV from './../assets/Videos/star-wars.mp4'
 import disneyV from './../assets/Videos/disney.mp4'
