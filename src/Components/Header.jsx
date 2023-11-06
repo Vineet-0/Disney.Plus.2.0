@@ -29,8 +29,8 @@ function Header() {
         }
     ]
   return (
-    <div className='flex items-center justify-between px-8 py-5 w-screen'>
-        <div className='flex gap-8 items-center'>
+    <div className='fixed top-0 flex items-center justify-between px-8 py-5 w-screen bg-gradient-to-b from-[#121212] to-[transparent] z-10'>
+        <div className='flex gap-8 items-center z-10'>
             <img src={logo} className='w-[150px] 
             md:w-[200px] object-cover' />
             <div className='hidden lg:flex gap-8 pt-[10px]'>
@@ -38,7 +38,7 @@ function Header() {
                 <HeaderItem name={item.name} Icon={item.icon} />
             ))}
         </div>
-        <div className='flex pt-[11px] lg:hidden gap-5'>
+        <div className='flex pt-[11px] lg:hidden gap-5 z-10'>
             {menu.map((item,index)=>index<1&&(
                 <HeaderItem name={''} Icon={item.icon} />
             ))}
@@ -53,7 +53,7 @@ function Header() {
                 </div> 
             </div>
         </div>
-        <div>
+        <div className='z-10'>
             <HiOutlineUserCircle className='w-[35px] h-[35px]'/> 
         </div>
         {/* <img src="https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
