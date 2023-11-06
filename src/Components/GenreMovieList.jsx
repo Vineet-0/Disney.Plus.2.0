@@ -5,7 +5,7 @@ import MovieList from './MovieList'
 function GenreMovieList() {
   return (
     <div>
-        {GenresList.genere.map((item,index)=>index<=10&&(
+        {GenresList.genere.map((item,index)=>index<=19&&(
             <div className='py-4 px-5 lg:px-16'>
                 <h2 className='text-[20px] sm:text-[25px] text-white 
                 font-bold pl-4 sm:pl-5'>{item.name}</h2> 

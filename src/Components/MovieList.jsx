@@ -29,13 +29,13 @@ function MovieList({genreId,index_}) {
         className={`text-[50px] text-white
         p-2 z-10 cursor-pointer 
         hidden md:block absolute
-        ${index_%3==0?'mt-[70px]':'mt-[140px]'} `}/>
+        ${index_%3==1?'mt-[70px]':'mt-[140px]'} `}/>
    
         <div ref={elementRef} className='flex overflow-x-auto gap-8
         scrollbar-none scroll-smooth pt-4 px-3 pb-4'>
             {movieList.map((item,index)=>(
             <>
-                {index_%3==0?<HrMovieCard movie={item}/>:<MovieCard movie={item} />}
+                {index_%3==1?<HrMovieCard movie={item}/>:<MovieCard movie={item} />}
             </> 
             ))}
         </div>

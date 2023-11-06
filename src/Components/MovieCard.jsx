@@ -12,7 +12,7 @@ function MovieCard({movie}) {
   return (
     <>
       <img src={IMAGE_BASE_URL+movie.poster_path} 
-        className='w-[150px] md:w-[200px] rounded-lg cursor-pointer
+        className='w-[150px] md:w-[200px] first-line:rounded-lg cursor-pointer
         hover:scale-110 transition-all duration-150 ease-in'
         onClick={handleRedirect}
       />

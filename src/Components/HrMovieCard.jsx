@@ -12,7 +12,7 @@ function HrMovieCard({movie}) {
   return (
     <section className='hover:scale-110 transition-all duration-150 ease-in'>
       <img src={IMAGE_BASE_URL+movie.backdrop_path} 
-        className='w-[200px] md:w-[260px] rounded-lg cursor-pointer'
+        className='w-[200px] md:w-[260px] max-h-[150px] rounded-lg cursor-pointer'
         onClick={handleRedirect}
       />
       <h2 className='w-[200px] md:w-[260px] text-white mt-2'>
