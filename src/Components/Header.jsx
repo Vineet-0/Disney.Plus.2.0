@@ -28,11 +28,20 @@ function Header() {
             icon:FaTv
         }
     ]
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
   return (
     <div className='fixed top-0 flex items-center justify-between px-8 py-5 w-screen bg-gradient-to-b from-[#121212] to-[transparent] z-10'>
         <div className='flex gap-8 items-center z-10'>
-            <img src={logo} className='w-[150px] 
-            md:w-[200px] object-cover' />
+            <img
+                src={logo}
+                className='w-[150px] md:w-[200px] object-cover'
+                onClick={scrollToTop} 
+            />
             <div className='hidden lg:flex gap-8 pt-[10px]'>
             {menu.map((item)=>(
                 <HeaderItem name={item.name} Icon={item.icon} />
