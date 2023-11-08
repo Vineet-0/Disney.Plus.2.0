@@ -26,10 +26,10 @@ function MovieList({genreId,index_}) {
   return (
     <div className='relative'>
         <IoChevronBackOutline onClick={()=>slideLeft(elementRef.current)} 
-        className={`text-[50px] text-white
-        p-2 z-10 cursor-pointer 
-        hidden md:block absolute
-        ${index_%3==1?'mt-[70px]':'mt-[140px]'} `}/>
+            className={`text-[50px] text-white
+            p-2 z-10 cursor-pointer 
+            hidden md:block absolute
+            ${index_%3==1?'mt-[70px]':'mt-[140px]'} `}/>
    
         <div ref={elementRef} className='flex overflow-x-auto gap-8
         scrollbar-none scroll-smooth pt-4 px-3 pb-4'>
@@ -42,9 +42,8 @@ function MovieList({genreId,index_}) {
         
         <IoChevronForwardOutline onClick={()=>slideRight(elementRef.current)}
             className={`text-[50px] text-white hidden md:block
-            p-2 cursor-pointer z-10 top-0
-                absolute right-0 
-                ${index_%3==0?'mt-[70px]':'mt-[140px]'}`}/> 
+            p-2 cursor-pointer z-10 top-0 absolute right-0 
+            ${index_%3==1?'mt-[70px]':'mt-[140px]'}`}/> 
     </div>
   )
 }
