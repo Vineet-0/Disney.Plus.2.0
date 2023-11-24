@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import GlobalApi from '../Services/GlobalApi'
+
+const LOADING_IMAGE_URL = "https://via.placeholder.com/150"; // Replace with your loading skeleton image URL
+const MIN_LOADING_TIME_MS = 5000;
+
 import { HiChevronLeft, HiChevronRight } from 'react-icons/hi2';
 
 const IMAGE_BASE_URL="https://image.tmdb.org/t/p/original";
@@ -7,7 +11,17 @@ const screenWidth = window.innerWidth;
 
 import Carousel from '../Components/Carousel'
 function Slider() {
+    const [loading, setLoading] = useState(true);
     const [movieList,setMovieList]=useState([]);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, MIN_LOADING_TIME_MS);
+    
+        return () => clearTimeout(timer);
+      }, []); // Run the effect only once when the component mounts
+
     const elementRef=useRef();
     useEffect(()=>{
         getTrendingMovies();
@@ -45,31 +59,6 @@ function Slider() {
         }
         </Carousel>
     </div>
-
-    
-
-    // <div>
-    //     <HiChevronLeft
-    //         className="hidden md:block text-white text-[30px] absolute
-    //         mx-8 mt-[320px] cursor-pointer " 
-    //         onClick={()=>sliderLeft(elementRef.current)}/>
-
-    //     <HiChevronRight
-    //         className='hidden md:block text-white text-[30px] absolute
-    //         mx-8 mt-[320px] cursor-pointer right-0' 
-    //         onClick={()=>sliderRight(elementRef.current)}/>
-
-   
-    //     <div className='flex overflow-x-auto w-full px-16 pb-4
-    //     scrollbar-none scroll-smooth' ref={elementRef}> 
-    //         {movieList.map((item)=>(
-    //             <img src={IMAGE_BASE_URL+item.backdrop_path} 
-    //             className='min-w-full  md:h-[640px] object-cover
-    //             object-left-top mr-5 rounded-md hover:border-[4px]
-    //             border-gray-400 transition-all duration-100 ease-in'/>
-    //         ))}
-    //     </div>
-    // </div>
   )
 }
 
