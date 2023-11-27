@@ -35,7 +35,7 @@ function Header() {
         });
     };
   return (
-    <div className='fixed top-0 flex items-center justify-between px-8 py-5 w-screen bg-gradient-to-b from-[#121212] to-[transparent] z-10'>
+    <div className='md:fixed md:top-0 flex items-center justify-between px-8 py-5 w-screen md:bg-gradient-to-b md:from-[#121212] md:to-[transparent] z-10'>
         <div className='flex gap-8 items-center z-10'>
             <img
                 src={logo}
