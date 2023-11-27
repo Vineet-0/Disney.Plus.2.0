@@ -46,10 +46,10 @@ const Carousel = ({children: slides,titles,years,languages}) => {
 
             {/* Shadow */}
 
-            <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-black to-transparent">
+            <div className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-[#131520] to-transparent">
 
             </div>
-            <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#121212] to-[transparent]">
+            <div className="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-[#131520] to-[transparent]">
 
             </div>
 

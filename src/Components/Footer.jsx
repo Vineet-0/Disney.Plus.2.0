@@ -3,7 +3,7 @@ import logo from '../assets/Images/MoviesNowLogo.png'
 
 function Footer() {
     return (
-        <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <footer class="bg-white rounded-lg shadow dark:bg-[#131520] m-4">
             <div class="w-full max-w-screen-xl mx-auto p-4 md:pt-8 md:pb-5 lg:pb-6">
                 <div class="sm:flex sm:items-center sm:justify-between">
                     <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
