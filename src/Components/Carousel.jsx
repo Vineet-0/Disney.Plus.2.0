@@ -55,7 +55,7 @@ const Carousel = ({children: slides,titles,years,languages}) => {
 
             {/* Details */}
 
-            <div className='absolute left-12 md:left-[100px] bottom-[30px] md:bottom-[50px] xl:bottom-[130px] z-10'>
+            <div className='absolute left-12 md:left-[100px] bottom-[30px] md:bottom-[50px] xl:bottom-[130px]'>
                 <div className='flex flex-row mb-2 lg:mb-4'>
                     {titles[curr] !== undefined && (
                     <div className="">
