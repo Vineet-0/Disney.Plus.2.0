@@ -1,6 +1,8 @@
 import axios from "axios";
 
 const api_key = import.meta.env.VITE_MOVIE_API_KEY;
+console.log("api_key");
+console.kog(api_key);
 
 const movieBaseUrl="https://api.themoviedb.org/3"
 
