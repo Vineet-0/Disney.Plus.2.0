@@ -71,7 +71,8 @@ function OTT_House() {
                         ?
                         <div className='mt-[20px] bg-[#38406e] animate-pulse'>
                             <img src={LOADING_IMAGE_URL} alt=""
-                                className='opacity-0'
+                                className='transition-all duration-300
+                                ease-in-out opacity-0'
                             />
                         </div>
                         :
