@@ -24,7 +24,7 @@ function MovieCard({ movie }) {
 
   return (
     <>
-      <div className={`min-w-[150px] md:min-w-[200px] rounded-lg overflow-hidden relative
+      <div className={`min-w-[150px] md:min-w-[200px] rounded-lg relative
         ${loading ? 'animate-pulse' : ''}`}>
         {loading && (
           <div className="absolute inset-0 bg-[#38406e] animate-pulse"></div>
@@ -32,7 +32,7 @@ function MovieCard({ movie }) {
         <img
           src={movie ? IMAGE_BASE_URL + movie.poster_path : LOADING_IMAGE_URL}
           alt={movie ? movie.title : 'Loading...'}
-          className={`w-full h-full object-cover cursor-pointer
+          className={`w-full h-full object-cover cursor-pointer rounded-lg
             ${loading ? 'opacity-0' : 'opacity-100'}
             hover:scale-110 transition-all duration-150 ease-in`}
           onClick={handleRedirect}

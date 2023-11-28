@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Navbar from "./components/Header/navbar"
-import Footer from "./components/Footer/footer"
+import Navbar from "./components/Header/Navbar.jsx"
+import Footer from "./components/Footer/footer.jsx"
 
-import Home from "./pages/1.Home/Home"
-import Search from "./pages/2.Search/Search"
-import Watchlist from "./pages/3.Watchlist/Watchlist"
-import Shows from "./pages/4.Shows/Shows"
-import Movies from "./pages/5.Movies/Movies"
-import Series from "./pages/6.Series/Series"
+import Home from "./pages/1.Home/Home.jsx"
+import Search from "./pages/2.Search/Search.jsx"
+import Watchlist from "./pages/3.Watchlist/Watchlist.jsx"
+import Shows from "./pages/4.Shows/Shows.jsx"
+import Movies from "./pages/5.Movies/Movies.jsx"
+import Series from "./pages/6.Series/Series.jsx"
 
 function App() {
 
