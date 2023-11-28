@@ -69,11 +69,7 @@ function OTT_House() {
                 {OTT_List.map((item)=>(
                     loading
                         ?
-                        <div className='mt-[20px] bg-[#38406e] animate-pulse'>
-                            <img src={LOADING_IMAGE_URL} alt=""
-                                className='transition-all duration-300
-                                ease-in-out opacity-0'
-                            />
+                        <div className='mt-[20px] h-[120px] bg-[#38406e] animate-pulse z-9'>
                         </div>
                         :
                         <div className='hover:scale-110 transition-all duration-300
