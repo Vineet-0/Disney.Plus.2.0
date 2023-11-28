@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react'
-import GlobalApi from '../Services/GlobalApi'
-import MovieCard from './MovieCard';
+import GlobalApi from '../../Services/GlobalApi'
 import { IoChevronBackOutline, IoChevronForwardOutline } from 'react-icons/io5';
-import HrMovieCard from './HrMovieCard';
+
+import MovieCard from '../Cards/MovieCard.jsx';
+import HrMovieCard from '../Cards/HrMovieCard.jsx';
+
 function MovieList({genreId,index_}) {
     const [movieList,setMovieList]=useState([])
     const elementRef=useRef(null);

@@ -39,9 +39,10 @@ const Carousel = ({children: slides,titles,years,languages}) => {
             {/* Slides */}
 
             <div 
-            className="flex transition-transform ease-out duration-500"
-            style={{transform: `translateX(-${curr*100}%)`}}
-            >{slides}
+                className="flex transition-transform ease-out duration-500"
+                style={{transform: `translateX(-${curr*100}%)`}}
+            >
+                {slides}
             </div>
 
             {/* Shadow */}

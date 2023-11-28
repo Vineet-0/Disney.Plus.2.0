@@ -1,4 +1,4 @@
-const genere= [
+const List= [
     {
       "id": 28,
       "name": "Action"
@@ -79,5 +79,5 @@ const genere= [
   ]
 
   export default{
-    genere
+    List
   }

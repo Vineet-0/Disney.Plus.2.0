@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HeaderItem({name,Icon}) {
+function NavbarItems({name,Icon}) {
   return (
     <div className='text-white flex items-center gap-3
     text-[15px] font-semibold cursor-pointer hover:underline
@@ -11,4 +11,4 @@ function HeaderItem({name,Icon}) {
   )
 }
 
-export default HeaderItem
+export default NavbarItems

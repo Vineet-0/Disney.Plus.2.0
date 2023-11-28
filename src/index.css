@@ -8,7 +8,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #131520;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,10 +27,13 @@ a:hover {
 }
 
 body {
-  height: 100vh;
   background-color: #131520;
-  min-height: 100vh;
-
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
