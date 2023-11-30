@@ -2,18 +2,18 @@ import axios from "axios";
 
 const api_key = import.meta.env.VITE_MOVIE_API_KEY;
 
-const movieBaseUrl = "https://api.themoviedb.org/3"
 
-const movieByTrendingVideos = movieBaseUrl+"/trending/all/day?api_key="+api_key
-const movieByGenreBaseURL = movieBaseUrl+'/discover/movie?api_key='+api_key+'&with_genres=';
-const movieByPopularity = movieBaseUrl+'/movie/popular?api_key='+api_key+'&page=1&include_adult=false';
+const getTrendingVideos = axios.get("https://api.themoviedb.org/3/trending/all/day?api_key="+api_key);
+const getMovieByGenreId = (id) => axios.get('https://api.themoviedb.org/3/discover/movie?api_key='+api_key+'&with_genres='+id);
+// const getPopularMovies = axios.get('https://api.themoviedb.org/3/movie/popular?api_key='+api_key+'&page=1&include_adult=false');
+const getPopularMoviesPage = (page) => axios.get('https://api.themoviedb.org/3/movie/popular?api_key='+api_key+'&page='+page+'&include_adult=false');
 
-const getTrendingVideos = axios.get(movieByTrendingVideos);
-const getMovieByGenreId = (id) => axios.get(movieByGenreBaseURL+id);
-const getPopularMovies = axios.get(movieByPopularity);
+const getSearchResults = (searchTerm) => axios.get('https://api.themoviedb.org/3/search/movie?api_key='+api_key+'&query='+searchTerm+'&sort_by=popularity.desc&include_adult=false');
 
 export default{
     getTrendingVideos,
     getMovieByGenreId,
-    getPopularMovies
+    // getPopularMovies,
+    getPopularMoviesPage,
+    getSearchResults
 }

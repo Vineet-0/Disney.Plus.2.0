@@ -1,0 +1,42 @@
+import React,{useEffect} from 'react'
+import GlobalApi from '../Services/GlobalApi';
+
+import { FaSearch } from "react-icons/fa";
+
+const SearchBar = ({searchTerm,setSearchTerm,setSearchResults}) => {
+
+
+    const getSearchResults=()=>{
+        if(searchTerm){
+            GlobalApi.getSearchResults(searchTerm).then(resp=>{
+                setSearchResults(resp.data.results);
+            })
+        }
+        else{
+            setSearchResults([]);
+        }
+    }
+    //Re-render on change in search term
+    useEffect(() => {
+        getSearchResults();
+    }, [searchTerm]);
+    
+    return (
+        <div className="sticky top-6 sm:top-16 z-9 sm:z-10 px-5 pt-3 max-w-lg mx-auto">
+            <div className="relative flex items-center w-full h-12 rounded-full focus-within:shadow-lg bg-white overflow-hidden">
+                <div className="grid place-items-center ml-2 h-full w-12 text-gray-900">
+                    <FaSearch width={24} height={24} />
+                </div>
+                <input
+                    className="h-full w-full outline-none text-sm placeholder-gray-900 text-gray-900 bg-white pr-2"
+                    type="text"
+                    placeholder="Search Movies.."
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                />
+            </div>
+        </div>
+    )
+}
+
+export default SearchBar
+
