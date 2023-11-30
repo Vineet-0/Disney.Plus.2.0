@@ -31,7 +31,7 @@ function HrMovieCard({ movie }) {
           <div className="absolute inset-0 bg-[#38406e] animate-pulse"></div>
         )}
         <img
-          src={movie ? IMAGE_BASE_URL + movie.backdrop_path : LOADING_IMAGE_URL}
+          src={movie.backdrop_path ? IMAGE_BASE_URL + movie.backdrop_path : LOADING_IMAGE_URL}
           alt={movie ? movie.title : 'Loading...'}
           className={`w-full h-full object-cover cursor-pointer
             ${loading ? 'opacity-0' : 'opacity-100'}`}

@@ -12,9 +12,6 @@ const getTrendingVideos = axios.get(movieByTrendingVideos);
 const getMovieByGenreId = (id) => axios.get(movieByGenreBaseURL+id);
 const getPopularMovies = axios.get(movieByPopularity);
 
-console.log("Hi");
-console.log(getPopularMovies.data);
-
 export default{
     getTrendingVideos,
     getMovieByGenreId,

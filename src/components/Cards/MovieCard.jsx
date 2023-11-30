@@ -30,7 +30,7 @@ function MovieCard({ movie }) {
           <div className="absolute inset-0 bg-[#38406e] animate-pulse"></div>
         )}
         <img
-          src={movie ? IMAGE_BASE_URL + movie.poster_path : LOADING_IMAGE_URL}
+          src={movie.poster_path ? IMAGE_BASE_URL + movie.poster_path : LOADING_IMAGE_URL}
           alt={movie ? movie.title : 'Loading...'}
           className={`w-full h-full object-cover cursor-pointer rounded-lg
             ${loading ? 'opacity-0' : 'opacity-100'}
