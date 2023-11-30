@@ -66,13 +66,13 @@ function OTT_House() {
                 OTT's
             </h2> }
             <div className='grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6 xl:grid-cols-6 md:gap-5'>
-                {OTT_List.map((item)=>(
+                {OTT_List.map((item,index)=>(
                     loading
                         ?
-                        <div className='mt-[20px] h-[120px] bg-[#38406e] animate-pulse z-9'>
+                        <div key={index} className='mt-[20px] h-[120px] bg-[#38406e] animate-pulse z-9'>
                         </div>
                         :
-                        <div className='hover:scale-110 transition-all duration-300
+                        <div key={index} className='hover:scale-110 transition-all duration-300
                             ease-in-out cursor-pointer relative shadow-xl xl:shadow-none
                             shadow-gray-800
                         '>

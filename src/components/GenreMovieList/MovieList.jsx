@@ -14,17 +14,17 @@ function MovieList({genreId,index_}) {
 
     const getMovieByGenreId=()=>{
         GlobalApi.getMovieByGenreId(genreId).then(resp=>{
-            // console.log(resp.data.results)
             setMovieList(resp.data.results)
         })
     }
 
-    const slideRight=(element)=>{
-        element.scrollLeft+=500;
-    }
     const slideLeft=(element)=>{
         element.scrollLeft-=500;
     }
+    const slideRight=(element)=>{
+        element.scrollLeft+=500;
+    }
+
   return (
     <div className='relative'>
         <IoChevronBackOutline onClick={()=>slideLeft(elementRef.current)} 
@@ -37,7 +37,7 @@ function MovieList({genreId,index_}) {
         scrollbar-none scroll-smooth pt-4 px-3 pb-4'>
             {movieList.map((item,index)=>(
             <>
-                {index_%3==1?<HrMovieCard movie={item}/>:<MovieCard movie={item} />}
+                {index_%3==1?<HrMovieCard key={index+1000} movie={item}/>:<MovieCard key={index+2000}  movie={item} />}
             </> 
             ))}
         </div>

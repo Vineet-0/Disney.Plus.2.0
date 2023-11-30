@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Slider from '../../components/slider/Slider'
+import Slider from '../../components/Slider/Slider'
 import OTT_House from '../../components/OTT_House/OTT_House'
 import GenreMovieList from '../../components/GenreMovieList/GenreMovieList'
 

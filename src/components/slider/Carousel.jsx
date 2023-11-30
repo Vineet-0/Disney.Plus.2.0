@@ -119,6 +119,7 @@ const Carousel = ({children: slides,titles,years,languages}) => {
                     {
                         slides.map((el, i) => (
                             <div
+                            key={i}
                             className={`
                             transition-all w-2 md:w-4 h-1 md:h-1.5 bg-white rounded-sm
                             ${curr === i ? "w-5 md:w-8" : "opacity-50"}
