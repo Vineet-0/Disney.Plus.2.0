@@ -37,7 +37,7 @@ function MovieList({genreId,index_}) {
         scrollbar-none scroll-smooth pt-4 px-3 pb-4'>
             {movieList.map((item)=>(
             <>
-                {index_%3==1?<HrMovieCard key={index_} movie={item}/>:<MovieCard key={index_}  movie={item} />}
+                {index_%3==1?<HrMovieCard key={item.id} movie={item}/>:<MovieCard key={item.id}  movie={item} />}
             </> 
             ))}
         </div>

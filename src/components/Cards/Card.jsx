@@ -8,8 +8,8 @@ const Card = ({ cardData }) => {
     return (
         <>
             {cardData.map((movie) => (
-                // <Link key={movie?.id} href={`/movie/${movie?.id}`}>
-                    <div className="group z-8">
+                <a key={movie?.id} href={`/movie/${movie?.id}`}>
+                    <div className="group z-6">
                         <div className="flex flex-col justify-end mx-auto w-full h-full max-h-[35rem] max-w-fit overflow-hidden">
                             {/* Movie Poster with Fallback Image */}
                             {movie.poster_path ? (
@@ -34,12 +34,12 @@ const Card = ({ cardData }) => {
                                 />
                             )}
                             {/* Movie Details */}
-                            <h3 className="mt-3 text-md text-white">{movie?.title}</h3>
-                            <div className="flex flex-row justify-between">
+                            <h3 className="mt-3 text-md text-white h-[30px] overflow-hidden">{movie?.title}</h3>
+                            <div className="flex flex-row items-center justify-between">
                                 <p className="mt-1 text-md font-medium text-white">
                                     {parseInt(movie?.release_date)}
                                 </p>
-                                <p className="flex flex-row justify-between mt-1 text-md font-medium text-white">
+                                <p className="flex flex-row items-center justify-between mt-1 text-md font-medium text-white">
                                     <FaRegStar className="mr-2"
                                         width={20}
                                         height={20}
@@ -50,7 +50,7 @@ const Card = ({ cardData }) => {
                             </div>
                         </div>
                     </div>
-                // </Link>
+                </a>
             ))}
         </>
     )

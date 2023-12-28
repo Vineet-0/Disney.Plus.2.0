@@ -9,6 +9,7 @@ import Watchlist from "./pages/3.Watchlist/Watchlist.jsx"
 import Shows from "./pages/4.Shows/Shows.jsx"
 import Movies from "./pages/5.Movies/Movies.jsx"
 import Series from "./pages/6.Series/Series.jsx"
+import Movie from "./pages/7.Movies/Movie.jsx"
 
 function App() {
 
@@ -26,6 +27,8 @@ function App() {
                     <Route exact path="/shows" element={<Shows />} />
                     <Route exact path="/movies" element={<Movies />} />
                     <Route exact path="/series" element={<Series />} />
+
+                    <Route exact path="/movie/:movieID" element={<Movie />} />
 
                 </Routes>
 
