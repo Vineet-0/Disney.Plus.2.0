@@ -14,16 +14,9 @@ function HrMovieCard({ movie }) {
     return () => clearTimeout(timer);
   }, []); // Run the effect only once when the component mounts
 
-  const handleRedirect = () => {
-    if (movie.title) {
-      const encodedTitle = encodeURIComponent(movie.title + " official trailer");
-      const searchUrl = `https://www.google.com/search?q=${encodedTitle}`;
-      window.open(searchUrl, "_blank");
-    }
-  };
-
   return (
-    <section className='hover:scale-110 transition-all duration-150 ease-in'>
+    
+    <section className='hover:scale-105 transition-all duration-150 ease-in-out'>
       <div className={`w-[200px] md:w-[260px] max-h-[150px] rounded-lg overflow-hidden relative
         ${loading ? 'animate-pulse' : ''}`}
       >
@@ -35,7 +28,6 @@ function HrMovieCard({ movie }) {
           alt={movie ? movie.title : 'Loading...'}
           className={`w-full h-full object-cover cursor-pointer
             ${loading ? 'opacity-0' : 'opacity-100'}`}
-          onClick={handleRedirect}
           onLoad={() => setLoading(false)} // Mark as not loading when the image is loaded
         />
       </div>

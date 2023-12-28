@@ -18,7 +18,6 @@ const Movie = () => {
 
     // Fetch movie data and cast
     useEffect(() => {
-        console.log(movieID);
         axios.get(`https://api.themoviedb.org/3/movie/${movieID}?api_key=${api_key}&include_adult=false`).then(resp=>{
             setMovie(resp.data);
         })
@@ -38,7 +37,7 @@ const Movie = () => {
     useEffect(() => {
         if (credits?.crew) {
           const directorMap = {};
-          credits.crew.forEach((crewMember) => {
+          credits.crew.map((crewMember) => {
             if (crewMember.job === 'Director') {
               directorMap[crewMember.id] = crewMember.name;
             }
@@ -52,7 +51,7 @@ const Movie = () => {
     const directorIds = Object.entries(directors).map(([key, value]) => key);
 
     return (
-        <>
+        <div className='mt-16'>
             {/* Movie Details */}
             <Details movie={movie} directorList={directorList} />
             {/* Movie Cast */}
@@ -61,7 +60,7 @@ const Movie = () => {
             <Carousel heading={"Similar Movies"} data={similarMovies} />
             {/* More Movies from the Directors */}
             <Directors directorIds={directorIds} directors={directors} />
-        </>
+        </div>
     )
 }
 

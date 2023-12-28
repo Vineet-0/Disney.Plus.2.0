@@ -36,9 +36,9 @@ function MovieList({genreId,index_}) {
         <div ref={elementRef} className='flex overflow-x-auto gap-8
         scrollbar-none scroll-smooth pt-4 px-3 pb-4'>
             {movieList.map((item)=>(
-            <>
+            <a key={item?.id} href={`/movie/${item?.id}`}>
                 {index_%3==1?<HrMovieCard key={item.id} movie={item}/>:<MovieCard key={item.id}  movie={item} />}
-            </> 
+            </a> 
             ))}
         </div>
         

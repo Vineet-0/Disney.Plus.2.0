@@ -22,8 +22,8 @@ const SearchBar = ({searchTerm,setSearchTerm,setSearchResults}) => {
     }, [searchTerm]);
     
     return (
-        <div className="sticky top-6 sm:top-16 z-9 px-5 sm:pt-3 max-w-lg mx-auto ">
-            <div className="relative flex z-9 items-center w-full h-12 rounded-full focus-within:shadow-lg bg-white overflow-hidden">
+        <div className="fixed top-6 sm:top-16 left-[50%] -translate-x-[50%] z-1 px-5 sm:pt-3 w-full max-w-lg mx-auto ">
+            <div className="relative flex z-1 items-center w-full h-12 rounded-full focus-within:shadow-lg bg-white overflow-hidden">
                 <div className="grid place-items-center ml-2 h-full w-12 text-gray-900">
                     <FaSearch width={24} height={24} />
                 </div>

@@ -7,6 +7,11 @@ const Directors = ({ directorIds, directors }) => {
     const [data,setData] = useState([]);
     const [moreFrom, setMoreFrom] = useState(null);
 
+    console.log(":) -> directors")
+    console.log(directors);
+    console.log(":) -> directorsIds");
+    console.log(directorIds);
+
     //Fetch movies of all directors
     const fetchDirectorMovies = async () => {
         const moviesFetched = await Promise.all(

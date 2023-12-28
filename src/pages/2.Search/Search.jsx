@@ -35,7 +35,7 @@ const Search = () => {
                 setSearchResults={setSearchResults}
             />
             
-            <div className="mx-auto max-w-2xl px-6 py-6 sm:py-16 sm:mt-8 md:px-2 lg:py-0 lg:max-w-7xl lg:px-8">
+            <div className="z-3 mx-auto max-w-2xl px-6 py-6 sm:py-16 sm:mt-40 md:px-2 lg:py-0 lg:max-w-7xl lg:px-8">
                 {!searchTerm ? (
                     <InfiniteScroll
                         dataLength={movies?.length}
